@@ -19,7 +19,7 @@ export default class UrlUtils {
     if (url.indexOf('?') > -1) {
       url = url.substring(0, url.indexOf('?'))
     }
-    return url
+    return url.replace(/^\//, '')
   }
 
   public static urlMatchesPattern = (url: string, pattern: string) => {
